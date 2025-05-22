@@ -1,15 +1,25 @@
 .App {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
   min-height: 100vh;
   padding: 20px;
+  transition: all 0.3s ease;
+}
+
+:root {
+  --background: var(--theme-background);
+  --text: var(--theme-text);
+  --primary: var(--theme-primary);
+  --secondary: var(--theme-secondary);
+  --accent: var(--theme-accent);
+  --border: var(--theme-border);
+  --shadow: var(--theme-shadow);
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f9f9f9;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button {

@@ -3,10 +3,13 @@
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+  background-color: var(--secondary-bg);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px var(--shadow);
 }
 
 h1 {
-  color: #333;
+  color: var(--text);
   margin-bottom: 30px;
 }
 
@@ -41,19 +44,19 @@ h1 {
 .vs {
   font-size: 24px;
   font-weight: bold;
-  color: #ff5722;
+  color: var(--accent);
 }
 
 .thinking {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: #f0f0f0;
+  background-color: var(--secondary);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  color: #666;
+  color: var(--text);
   animation: pulse 1s infinite;
 }
 
@@ -70,7 +73,7 @@ h1 {
 }
 
 .reset-button {
-  background-color: #ff5722;
+  background-color: var(--accent);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -81,18 +84,19 @@ h1 {
 }
 
 .reset-button:hover {
-  background-color: #e64a19;
+  filter: brightness(1.1);
 }
 
 .history {
   margin-top: 40px;
   text-align: left;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border);
   padding-top: 20px;
 }
 
 .history h3 {
   margin-bottom: 10px;
+  color: var(--text);
 }
 
 .history ul {
@@ -102,5 +106,6 @@ h1 {
 
 .history li {
   padding: 8px 0;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
 }
