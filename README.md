@@ -1,90 +1,131 @@
 # Rock Paper Scissors Game
 
-A modern, interactive Rock Paper Scissors game built with React. Play against the computer in this classic game with a beautiful, animated interface.
-
-![Rock Paper Scissors Game](screenshot.png)
+A modern, feature-rich implementation of the classic Rock Paper Scissors game built with React. Play against the computer with multiple difficulty levels or challenge other players in real-time multiplayer matches.
 
 ## Features
 
-- 🎮 Interactive gameplay against computer AI
-- 💾 Persistent score tracking using localStorage
-- 📜 Game history tracking
-- 🎯 Beautiful animations and transitions
-- 📱 Responsive design for all devices
-- 🔄 Reset game functionality
-- 🎨 Modern UI with emoji-based choices
+### Game Modes
 
-## Technologies Used
+#### Single Player
+- Three difficulty levels:
+  - **Easy Mode**: Perfect for beginners
+    - 60% random moves
+    - 20% optimal moves
+    - 20% intentional mistakes
+  - **Medium Mode**: Balanced challenge
+    - 50% random moves
+    - 40% optimal moves
+    - 10% mistakes
+  - **Hard Mode**: For experienced players
+    - 70% optimal moves
+    - 20% random moves
+    - 10% mistakes
+- Difficulty level persists between sessions
+- Detailed statistics for each difficulty level
 
-- React
-- CSS3 with Animations
-- localStorage for data persistence
-- Modern JavaScript (ES6+)
+#### Multiplayer
+- Real-time gameplay via WebSocket
+- Player matchmaking system
+- Username-based authentication
+- Live opponent status updates
+- Disconnect handling and game state management
+
+### Scoring & Statistics
+
+#### Single Player Stats
+- Overall win/loss record
+- Difficulty-specific statistics
+- Current winning/losing streaks
+- Win rate percentage
+- Total games played
+- Number of ties
+- Per-difficulty performance tracking
+
+#### Multiplayer Stats
+- Current win streak
+- Best win streak
+- Win rate percentage
+- Match history
+- Real-time score updates
+
+### Game History
+- Last 10 games record
+- Detailed match information:
+  - Player choices
+  - Game outcomes
+  - Timestamps
+  - Difficulty level (single player)
+  - Opponent names (multiplayer)
+
+### User Interface
+- Modern, responsive design
+- Dark/Light theme support
+- Animated game elements
+- Real-time feedback
+- Mobile-friendly layout
+- Accessibility features
+
+### Technical Features
+- Real-time WebSocket communication
+- Local storage for game preferences
+- Session persistence
+- Responsive design
+- Theme-aware styling
+- Error handling and recovery
+
+## Technology Stack
+
+- **Frontend**: React
+- **Backend**: Node.js, Express
+- **Real-time Communication**: Socket.IO
+- **State Management**: React Context
+- **Styling**: CSS with CSS Variables for theming
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js (version 12.0 or higher)
-- npm or yarn package manager
-
-### Installation
-
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/rock-paper-scissors.git
-```
-
-2. Navigate to the project directory:
-```bash
+git clone [repository-url]
 cd rock-paper-scissors
 ```
 
-3. Install dependencies:
+2. Install dependencies:
 ```bash
+# Install server dependencies
+cd server
+npm install
+
+# Install client dependencies
+cd ../
 npm install
 ```
 
-4. Start the development server:
+3. Start the development servers:
 ```bash
+# Start the backend server (from server directory)
+npm start
+
+# Start the frontend development server (from root directory)
 npm start
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## How to Play
+## Game Controls
 
-1. Choose your move by clicking on either Rock (✊), Paper (✋), or Scissors (✌️)
-2. The computer will make its choice
-3. The winner is determined by the classic rules:
-   - Rock beats Scissors
-   - Scissors beats Paper
-   - Paper beats Rock
-4. The score is automatically updated and saved
-5. View your game history below the main game area
-6. Use the Reset button to start a new game
+1. **Mode Selection**:
+   - Choose between Single Player and Multiplayer modes
+   - Select difficulty level in Single Player mode
 
-## Game Features
+2. **Making Moves**:
+   - Click on Rock, Paper, or Scissors buttons to make your choice
+   - Wait for computer/opponent response
+   - View the result and updated scores
 
-### Score Tracking
-- Keeps track of both player and computer scores
-- Scores persist even after page refresh
-- Visual display of current score
-
-### Game History
-- Records all played rounds
-- Shows both player and computer choices
-- Displays the outcome of each round
-
-### Animations
-- Smooth transitions between game states
-- Pulse animation during computer's turn
-- Victory/Defeat/Tie animations
-
-### Responsive Design
-- Playable on both desktop and mobile devices
-- Adaptive layout for different screen sizes
-- Touch-friendly interface
+3. **Game Management**:
+   - Reset game to clear scores and history
+   - Switch between game modes at any time
+   - Change difficulty levels during single-player games
 
 ## Contributing
 
@@ -92,7 +133,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 

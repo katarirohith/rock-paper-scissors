@@ -1,0 +1,132 @@
+.multiplayer-history {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: var(--secondary);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.multiplayer-history h3 {
+  color: var(--text);
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.history-item {
+  background-color: var(--background);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 1px 3px var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.history-item:hover {
+  transform: translateY(-2px);
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.opponent-name {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.game-time {
+  color: var(--text);
+  opacity: 0.7;
+}
+
+.game-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.move-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.move-info strong {
+  color: var(--primary);
+  text-transform: capitalize;
+}
+
+.game-result {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.game-result.win {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #4caf50;
+}
+
+.game-result.lose {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+}
+
+.game-result.tie {
+  background-color: rgba(33, 150, 243, 0.1);
+  color: #2196f3;
+}
+
+.streak-info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: var(--background);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px var(--shadow);
+}
+
+.streak-item {
+  text-align: center;
+}
+
+.streak-label {
+  display: block;
+  color: var(--text);
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.streak-value {
+  display: block;
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .game-details {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .move-info {
+    margin-bottom: 10px;
+  }
+} 
